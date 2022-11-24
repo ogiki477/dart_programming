@@ -1,21 +1,17 @@
 int main() {
-  Product sugar = new Product();
-  sugar.id = 1;
-  sugar.name = "sugar";
-  sugar.price = 1200;
-  productDisplay(sugar);
 
-  Product salt = new Product();
-  salt.id = 2;
-  salt.name = "Salt";
-  salt.price = 1500;
-  productDisplay(salt);
 
-  Product soap = new Product();
-  soap.id = 3;
-  soap.name = "Soap";
-  soap.price = 1700;
-  productDisplay(soap);
+  Product student1 = new Product();
+  student1.id = 1;
+  student1.name = "Nyene Mark";
+ student1.college = "CONAS";
+  productDisplay(student1);
+
+  Product student2 = new Product();
+ student2.id = 2;
+student2.name = "Ogiki Moses";
+  student2.college = "Coscis";
+  productDisplay(student2);
 /*
   for (Product pro in products) {
     if (pro.id.isOdd) {
@@ -30,7 +26,7 @@ void productDisplay(Product pro) {
   print("\n======================");
   print("ID: ${pro.id}");
   print("NAME: ${pro.name}");
-  print("PRICE: ${pro.price}");
+  print("COLLEGE: ${pro.college}");
   print("\n======================");
 }
 
@@ -47,11 +43,6 @@ void productDisplay(Product pro) {
 class Product {
   int id = 0;
   String name = "";
-  int price = 0;
+ String college = "";
 }
 
-class Customer {
-  int id = 0;
-  String name = "";
-  String phone_number = "";
-}

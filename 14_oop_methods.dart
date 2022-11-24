@@ -1,21 +1,16 @@
 int main() {
-  Product sugar = new Product();
-  sugar.id = 1;
-  sugar.name = "sugar";
-  sugar.price = 1200;
-  productDisplay(sugar);
+  Product Airtel = new Product();
+  Airtel.id = 1;
+  Airtel.name = "Airtel Airtime";
+  Airtel.amount = 10000;
+  productDisplay(Airtel);
 
-  Product salt = new Product();
-  salt.id = 2;
-  salt.name = "Salt";
-  salt.price = 1500;
-  productDisplay(salt);
+  Product MTN = new Product();
+  MTN.id = 2;
+  MTN.name = "MTN Airtime";
+  MTN.amount = 5000;
+  productDisplay(MTN);
 
-  Product soap = new Product();
-  soap.id = 3;
-  soap.name = "Soap";
-  soap.price = 1700;
-  productDisplay(soap);
   return 0;
 }
 
@@ -23,8 +18,9 @@ void productDisplay(Product pro) {
   print("\n======================");
   print("ID: ${pro.id}");
   print("NAME: ${pro.name}");
-  print("PRICE: ${pro.price}");
+  print("PRICE: ${pro.amount}");
   print("DISCOUNT: ${pro.getDiscount()}");
+   print("AMOUNT_TO_PAY: ${pro.getAmount()}");
   print("\n======================");
 }
 
@@ -41,17 +37,20 @@ void productDisplay(Product pro) {
 class Product {
   int id = 0;
   String name = "";
-  int price = 0;
+  int amount = 0;
 
   double getDiscount() {
     double disc = 0;
-    disc = (5 / 100) * this.price;
+    disc = (4 / 100) * this.amount;
+
     return disc;
+  }
+
+  double getAmount() {
+    double actual = 0;
+    actual = this.amount - this.getDiscount();
+    return actual;
   }
 }
 
-class Customer {
-  int id = 0;
-  String name = "";
-  String phone_number = "";
-}
+class Customer {}

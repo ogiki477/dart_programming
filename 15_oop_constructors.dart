@@ -1,21 +1,29 @@
 int main() {
-  Person moses = new Person();
+  Person omo = new Person();
+
+  omo.full_name = "omo moses";
+ 
+  omo.college = "Coscis";
+
+  displayPerson(omo);
   return 0;
 }
 
-displayPerson(Person p) {
-  print("/n=================");
-  print("FIRSTNAME:${p.first_name}");
+displayPerson(Person moses) {
+  print("\n==============");
+  print("FIRST NAME: ${moses.full_name}");
+
+  print("COUNTRY: ${moses.college}");
 }
 
 class Person {
-  String first_name = "";
-  String last_name = "";
-  String country = "";
+  String full_name = "";
+ 
+  String college = "";
 
   Person() {
-    this.first_name = "no name";
-    this.last_name = "--";
-    this.country = "--";
+    this.full_name = "No first name";
+    
+    this.college = "-";
   }
 }
